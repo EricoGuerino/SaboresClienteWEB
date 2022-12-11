@@ -1,0 +1,50 @@
+[
+    {"categorias":[
+        {"id":"1","descricao":"Doces"},
+        {"id":"2","descricao":"Diet"},
+        {"id":"3","descricao":"Zero Açucar"},
+        {"id":"4","descricao":"Sem adição de açúcar"},
+        {"id":"5","descricao":"Enriquecido com proteínas"}
+    ]},
+    {"fabricante":[
+        {"id":"1","descricao":"Haribol"},
+        {"id":"2","descricao":"Famoso"},
+        {"id":"3","descricao":"Doce Amor"},
+        {"id":"4","descricao":"Doces Fazenda de Minas"},
+        {"id":"5","descricao":"Germanos"},
+        {"id":"6","descricao":"Yes"}
+    ]},
+    {"produtos":[
+        {"id":"1","nome":"Doce de Leite","descricao":"Doce de Leite para dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$28,99"},
+        {"id":"2","nome":"Doce de Leite com Coco","descricao":"Doce de Leite para dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$28,99"},
+        {"id":"3","nome":"Doce de Leite com Ameixa","descricao":"Doce de Leite para dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$28,99"},
+        {"id":"4","nome":"Cocada Cremosa","descricao":"Cocada Cremosa para dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$28,99"},
+        {"id":"5","nome":"Doce de Leite com Nozes","descricao":"Doce de Leite para dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$28,99"},
+        {"id":"6","nome":"Doce de Abóbora com Coco","descricao":"Doce de Abóbora com Coco para dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$28,99"},
+        {"id":"7","nome":"Pé de Moça de Colher","descricao":"Doce de Amendoin tipo pé de moça para dietas de ingestão controlada de açúcares - SEM ADIÇÃO DE AÇÚCARES","categorias":["1","2","3"],"fabricante":"Haribol","peso":"600g","preco":"R$35,99"},
+        {"id":"8","nome":"Leite Condensado","descricao":"Sobremesa Láctea sabor Leite Condensado para Dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$35,99"},
+        {"id":"9","nome":"Beijinho","descricao":"Foundant de Leite com Coco para dietas de ingestão controlada de açúcares","categorias":["1","2"],"fabricante":"Haribol","peso":"600g","preco":"R$28,99"},
+        {"id":"10","nome":"Goibada Cascão Diet","descricao":"Goibada Cascão Diet - Linha Premium","categorias":["1"],"fabricante":"Famoso","peso":"600g","preco":"R$44,99"},
+        {"id":"11","nome":"Bananinha","descricao":"Bananinha - Sem adição de açúcar","categorias":["1"],"fabricante":"Famoso","peso":"600g","preco":"R$44,99"},
+        {"id":"12","nome":"Abacaxi com Coco","descricao":"Barrinha de Fruta de Abacaxi com Coco - Sem adição de açúcar","categorias":["1"],"fabricante":"Famoso","peso":"600g","preco":"R$44,99"},
+        {"id":"13","nome":"Banana com cobertura de chocolate","descricao":"Barrinha de Fruta de Banana com cobertura de chocolate","categorias":["1"],"fabricante":"Famoso","peso":"600g","preco":"R$44,99"},
+        {"id":"14","nome":"Coco com cobertura de chocolate","descricao":"Barrinha de Fruta de Coco com cobertura de chocolate","categorias":["1"],"fabricante":"Famoso","peso":"600g","preco":"R$44,99"},
+        {"id":"15","nome":"Paçoca","descricao":"Paçoca Moreninha do Rio","categorias":["1","2"],"fabricante":"Rio","peso":"800g","preco":"R$ 19,99"},
+        {"id":"16","nome":"Palha Italiana","descricao":"Palha Italiana Sabor Chocolate Enriquecida com Whey Protein","categorias":["1","3"],"fabricante":"Germanos","peso":"30g","preco":"R$ 14,99"},
+        {"id":"17","nome":"Palha Italiana","descricao":"Palha Italiana Sabor Cookies & Cream Enriquecida com Whey Protein","categorias":["1","3"],"fabricante":"Germanos","peso":"30g","preco":"R$ 14,99"},
+        {"id":"18","nome":"Caramelos de Leite","descricao":"Caramelos de Leite - Sem adição de açúcares - Contém açúcares próprios dos ingredientes","categorias":["1","3"],"fabricante":"Avaré","peso":"200g","preco":"R$ 14,99"},
+        {"id":"19","nome":"Gotas de Leite","descricao":"Produzido em Avaré: Doce de Leite Pingo para dietas com insgestão controlada de açúcares","categorias":["1"],"fabricante":"Avaré","peso":"100g","preco":"R$ 21,99"},
+        {"id":"20","nome":"Pirulito","descricao":"Pirulito Sabor Morango Zero Açúcar","categorias":["3"],"fabricante":"Doce Amor","peso":"35g","preco":"R$ 13,99"},
+        {"id":"21","nome":"Merenguinho", "descricao":"Merenguinho - Sabor Original","categorias":["3"],"fabricante":"Doce Amor","peso":"35g","preco":"R$ 15,99"},
+        {"id":"22","nome":"Pingo de Leite","descricao":"Foundant de Leite","categorias":["1"],"fabricante":"Yoot","peso":"500g","preco":"R$ 33,99"},
+        {"id":"23","nome":"Cidra","descricao":"Cidra Ralada para dietas com insgestão controlada de açúcares","categorias":["1"],"fabricante":"Doces Fazenda de Minas","peso":"400g","preco":"R$ 28,99"},
+        {"id":"24","nome":"Goiabada Cascão","descricao":"Goiabada Cascão (Jam Cascão) para dietas com insgestão controlada de açúcares","categorias":["1"],"fabricante":"Doces Fazenda de Minas","peso":"400g","preco":"R$ 28,99"},
+        {"id":"25","nome":"Bananinha Cremosa","descricao":"Bananinha Cremosa Sem Adição de Açúcares","categorias":["1"],"fabricante":"famoso","peso":"100g","preco":"R$ 21,99"},
+        {"id":"26","nome":"Goiabada Cascão","descricao":"Goiabada Cascão em barra para dietas com insgestão controlada de açúcares","categorias":["1"],"fabricante":"Doces Fazenda de Minas","peso":"500g","preco":"R$ 25,99"},
+        {"id":"27","nome":"Goiabada Cascão Zero Açúcar","descricao":"Goiabada Cascão em barra sem adição de açúcares","categorias":["1"],"fabricante":"Haribol","peso":"150g","preco":"R$ 21,99"},
+        {"id":"28","nome":"Pé de Moça Zero Açúcar","descricao":"Pé de Moça em barra sem adição de açúcares","categorias":["1"],"fabricante":"Haribol","peso":"150g","preco":"R$ 21,99"},
+        {"id":"29","nome":"Cocada ao Leite","descricao":"Cocada ao Leite em tablete sem adição de açúcares para dietas de ingestão controlada de açúcares","categorias":["1"],"fabricante":"Haribol","peso":"150g","preco":"R$ 21,99"},
+        {"id":"30","nome":"Doce de Leite","descricao":"Doce de Leite em tablete sem adição de açúcares para dietas de ingestão controlada de açúcares","categorias":["1"],"fabricante":"Haribol","peso":"150g","preco":"R$ 21,99"},
+        {"id":"31","nome":"YES! Milk Shake Instantâneo","descricao":"YES! Milk Shake Instantâneo - Sabor Mo","categorias":["1"],"fabricante":"Yes","peso":"80g","preco":"R$ 38,99"}
+    ]}
+]

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Sabores Naturais</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <script language="javascript" src="resources/js/contato.js"></script>
+        <script language="javascript" src="resources/js/functions.js"></script>
+        <script language="javascript" src="resources/js/Connection.js"></script>
+        <style>
+            label {
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <header>
+                        <div style="width: 100%;height: 250px;display: flex;">
+                            <img src="resources/images/sabores_logo.jpg" style="width: inherit;"/>            
+                        </div>
+                        <nav style="width: 100%; background-color: rgb(51, 255, 0); border-radius: 5px; height: 50px;">
+                            <div style="vertical-align: middle;">
+                                <div id="menu" style="float:left; padding-left: 10px; padding-top: 10px;">
+                                    <a href="index.html">Loja</a>
+                                    <a> | </a>
+                                    <a href="produtos.html">Produtos</a>
+                                    <a> | </a>
+                                    <a href="contato.html">Contato</a>
+                                </div>
+                                <div style="float:right;padding-right: 10px; padding-top: 0px;">
+                                    <a style="color: blue;" id="a_usuario"><u id="underline_usuario">usuario</u></a>&nbsp;|&nbsp;<a id="a_login" style="color: blue;" onclick="javascript:showModal();"><u id="underline_login">Login</u></a>
+                                    <a href="carrinho.html">
+                                        <img src="resources/images/cesta-compras-icon.png" style="max-width: 50px;max-height: 50px;">
+                                    </a>                                    
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <article>
+                        <h3>Contato</h3>
+                        <div id="contato" style="border:solid 1px black;border-radius: 5px;">
+                            <div class="row"><div class="col-md-12"><br/></div></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="nome">Nome</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" size="50" id="nome" value="" name="nome">
+                                </div>
+                            </div>
+                            <div class="row"><div class="col-md-12"><br/></div></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="categoria">Categoria</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <select type="text" id="categoria" name="categoria">
+                                        <option>Selecione</option>
+                                        <option>Reclamações</option>
+                                        <option>Sugestões</option>
+                                        <option>Dúvidas</option>
+                                        <option>Trocas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row"><div class="col-md-12"><br/></div></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="assunto">Assunto</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <textarea id="assunto" value="" cols="30" rows="3" name="assunto"></textarea>
+                                </div>
+                            </div>
+                            <div class="row"><div class="col-md-12"><br/></div></div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label for="email">E-mail</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" size="20" id="email" value="" name="email"></textarea>
+                                </div>
+                            </div>
+                            <div class="row"><div class="col-md-12"><br/></div></div>
+                            <div class="row">
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4">
+                                    <input type="button" id="button_produto" onclick="javascript:enviarContato();" style="background-color: rgb(51, 255, 0); border-radius: 5px; width: 60%;" value="Enviar"/>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <div class="row"><div class="col-md-12"><br/></div></div>
+                        </div>
+                    </article>
+
+                    <footer style="width: 100%; background-color: rgb(51, 255, 0); border-radius: 5px; height: fit-content;">
+                        <p style="padding-left: 10px;font-family: Arial, Helvetica, sans-serif;font-size: 15px;">
+                            Empresa Sabores Naturais<br>
+                            Projeto para fins acadêmicos<br>
+                            <br>
+                            Projeto Integrado final de curso PUC-MG<br>
+                            <br>
+                            Desenvolvido por Érico Felício Gomes Guerino (Noro)<br>
+                            Contato: (41) 99251-1354<br>
+                        </p>
+                    </footer>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    window.onload = function() {
+        checarSessao();
+    }
+</script>

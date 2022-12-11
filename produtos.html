@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Sabores Naturais</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <script language="javascript" src="resources/js/Connection.js"></script>
+        <script language="javascript" src="resources/js/produtos.js"></script>
+        <script language="javascript" src="resources/js/functions.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <header>
+                        <div style="width: 100%;height: 250px;display: flex;">
+                            <img src="resources/images/sabores_logo.jpg" style="width: inherit;"/>            
+                        </div>
+                        <nav style="width: 100%; background-color: rgb(51, 255, 0); border-radius: 5px; height: 50px;">
+                            <div style="vertical-align: middle;">
+                                <div id="menu" style="float:left; padding-left: 10px; padding-top: 10px;">
+                                    <a href="index.html">Loja</a>
+                                    <a> | </a>
+                                    <a href="produtos.html">Produtos</a>
+                                    <a> | </a>
+                                    <a href="contato.html">Contato</a>
+                                </div>
+                                <div style="float:right;padding-right: 10px; padding-top: 0px;">
+                                    <a style="color: blue;" id="a_usuario"><u id="underline_usuario">usuario</u></a>&nbsp;|&nbsp;<a id="a_login" style="color: blue;" onclick="javascript:showModal();"><u id="underline_login">Login</u></a>
+                                    <a href="carrinho.html">
+                                        <img src="resources/images/cesta-compras-icon.png" style="max-width: 50px;max-height: 50px;">
+                                    </a>                                    
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <article>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <h4>Produto</h4>
+                                <div id="filtro-nome-produto">
+                                    <input type="text" id="input-filtro-nome-produto" style="width:100%;"/>
+                                </div>
+                                <br>
+                                <h4>Categorias</h4>
+                                <div id="filtro-categorias">
+                                    
+                                </div>
+                                <br>
+                                <h4>Fabricantes</h4>
+                                <div id="filtro-fabricantes">
+                                    
+                                </div>
+                                <br>
+                                <h4>Peso (gr)</h4>
+                                <div id="filtro-peso">
+                                    <h6>Peso Mínimo</h6>
+                                    <span id="span-filtro-peso-minimo1"></span> <input type="text" id="value-peso-min" value="0" size="1" style="text-align: center;"/> <span id="span-filtro-peso-maximo1"></span>    
+                                    <input type="range" id="input-filtro-peso-minimo" min="0" max="1000" value="0"
+                                    oninput="javascript:document.getElementById('value-peso-min').value=this.value;" 
+                                    onchange="javascript:document.getElementById('value-peso-min').value=this.value;"/>
+                                    <h6>Peso Máximo</h6>
+                                    <span id="span-filtro-peso-minimo2"></span> <input type="text" id="value-peso-max" value="0" size="1" style="text-align: center;"/> <span id="span-filtro-peso-maximo2"></span>
+                                    <input type="range" id="input-filtro-peso-maximo" min="0" max="1000" value="1000"
+                                    oninput="javascript:document.getElementById('value-peso-max').value=this.value;" 
+                                    onchange="javascript:document.getElementById('value-peso-max').value=this.value;"/>
+                                </div>
+                                <br>
+                                <h4>Preço (R$)</h4>
+                                <div id="filtro-preco">
+                                    <h6>Preço Mínimo</h6>
+                                    <span id="span-filtro-preco-minimo1"></span> <input type="text" id="value-preco-min" value="0" size="1" style="text-align: center;"/> <span id="span-filtro-preco-maximo1"></span>
+                                    <input type="range" id="input-filtro-preco-minimo" min="0" max="100" value="0"
+                                    oninput="javascript:document.getElementById('value-preco-min').value=this.value;" 
+                                    onchange="javascript:document.getElementById('value-preco-min').value=this.value;"/>
+                                    <h6>Preço Máximo</h6>
+                                    <span id="span-filtro-preco-minimo2"></span> <input type="text" id="value-preco-max" value="0" size="1" style="text-align: center;"/> <span id="span-filtro-preco-maximo2"></span>
+                                    <input type="range" id="input-filtro-preco-maximo" min="0" max="100"
+                                    oninput="javascript:document.getElementById('value-preco-max').value=this.value;" 
+                                    onchange="javascript:document.getElementById('value-preco-max').value=this.value;"/>
+                                </div>
+                                <input type="button" id="filtrar_produtos" onclick="javascript:filtrarProdutos();"
+                                    style="background-color: rgb(51, 255, 0); border-radius: 5px; width: 100%;" value="Filtrar" />
+                                <br><br>
+                            </div>
+                            <div class="col-md-10">
+                                <div id="produtos"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <footer style="width: 100%; background-color: rgb(51, 255, 0); border-radius: 5px; height: fit-content;">
+                        <p style="padding-left: 10px;font-family: Arial, Helvetica, sans-serif;font-size: 15px;">
+                            Empresa Sabores Naturais<br>
+                            Projeto para fins acadêmicos<br>
+                            <br>
+                            Projeto Integrado final de curso PUC-MG<br>
+                            <br>
+                            Desenvolvido por Érico Felício Gomes Guerino (Noro)<br>
+                            Contato: (41) 99251-1354<br>
+                        </p>
+                    </footer>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    window.onload = function() {
+        checarSessao();
+        carregarCategorias();
+        carregarProdutos();
+        carregarValoresMinMaxHTML();
+    }
+</script>

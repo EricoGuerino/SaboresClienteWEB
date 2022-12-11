@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Sabores Naturais</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <script language="javascript" src="resources/js/produtos_destaque.js"></script>
+        <script language="javascript" src="resources/js/produtos.js"></script>
+        <script language="javascript" src="resources/js/functions.js"></script>
+        <script language="javascript" src="resources/js/Connection.js"></script>
+    </head>
+
+    <style>
+        input, select {
+            width: 100%;
+            height: 27px;
+        }
+        label {
+            font-weight: bold;
+        }
+        
+        a:link#button_ir_dados_pessoais, a:visited#button_ir_dados_pessoais,
+        a:link#button_trocar_senha, a:visited#button_trocar_senha,
+        a:link#button_visualizar_compras, a:visited#button_visualizar_compras {
+            background-color: #2eb106;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            }
+
+        a:hover#button_ir_dados_pessoais, a:active#button_ir_dados_pessoais,
+        a:hover#button_trocar_senha, a:active#button_trocar_senha,
+        a:hover#button_visualizar_compras, a:active#button_visualizar_compras {
+            background-color: rgb(94, 255, 0);
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <header>
+                        <div style="width: 100%;height: 250px;display: flex;">
+                            <img src="resources/images/sabores_logo.jpg" style="width: inherit;"/>            
+                        </div>
+                        <nav style="width: 100%; background-color: rgb(51, 255, 0); border-radius: 5px; height: 50px;">
+                            <div style="vertical-align: middle;">
+                                <div id="menu" style="float:left; padding-left: 10px; padding-top: 10px;">
+                                    <a href="index.html">Loja</a>
+                                    <a> | </a>
+                                    <a href="produtos.html">Produtos</a>
+                                    <a> | </a>
+                                    <a href="contato.html">Contato</a>
+                                </div>
+                                <div style="float:right;padding-right: 10px; padding-top: 0px;">
+                                    <a style="color: blue;" id="a_usuario"><u id="underline_usuario">usuario</u></a>&nbsp;|&nbsp;<a id="a_login" style="color: blue;" onclick="javascript:showModal();"><u id="underline_login">Login</u></a>
+                                    <a href="carrinho.html">
+                                        <img src="resources/images/cesta-compras-icon.png" style="max-width: 50px;max-height: 50px;">
+                                    </a>                                    
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+                    <dialog id="login_dialog">
+                        <form id="login_form">
+                            <h4>LOGIN</h4>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="input_login_email">Email:</label>
+                                    </td>
+                                    <td>
+                                        <input type="email" id="input_login_email"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="input_login_password">Password:</label>
+                                    </td>
+                                    <td>
+                                        <input type="password" id="input_login_password"/>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div>
+                                <a href="cadastro.html">Não possuo cadastro</a>
+                            </div>
+                            <div align="center">
+                                <input type="button" onclick="javascript:realizarLogin()" value="Logar" />
+                                <input type="button" onclick="javascript:closeModal();" value="Fechar"/>
+                            </div>
+                        </form>
+                    </dialog>
+                    <article>
+                        <div>
+                            <form>
+                                
+                                <h2>Informações Login</h2>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="input_contato_email">Email: </label>
+                                        <input type="text" id="input_contato_email" disabled="disabled"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" id="col_password_antigo">
+                                        <label for="input_contato_password">Digite sua senha antiga: </label>
+                                        <input type="password" id="input_troca_password_antigo" style="width: 90%;"/>
+                                        <img src="resources/images/olho.png" onclick="javascript:visualizarPassword('input_troca_password_antigo');" style="height: 32px;"/>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" id="col_password_novo_1">
+                                        <label for="input_contato_password">Digite sua nova senha: </label>
+                                        <input type="password" id="input_troca_password_novo_1" style="width: 90%;"/>
+                                        <img src="resources/images/olho.png" onclick="javascript:visualizarPassword('input_troca_password_novo_1');" style="height: 32px;"/>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" id="col_password_novo_2">
+                                        <label for="input_contato_password">Confirme sua nova senha: </label>
+                                        <input type="password" id="input_troca_password_novo_2" style="width: 90%;"/>
+                                        <img src="resources/images/olho.png" onclick="javascript:visualizarPassword('input_troca_password_novo_2');" style="height: 32px;"/>
+                                    </div>
+                                    <div class="col-md-6"></div>
+                                </div>
+                                <br>
+                                <div align="center">
+                                    <a href="cadastro.html" id="button_ir_dados_pessoais">Dados Usuário</a>
+                                    <a href="#" id="button_trocar_senha" onclick="javascript:trocarSenha();">Confirmar</a>
+                                    <a href="#" id="button_visualizar_compras" onclick="javascript:navegarVisualizarCompras();">Ver Compras</a>
+                                </div>
+                                <br>
+                            </form>
+                        </div>
+                    </article>
+
+                    <footer style="width: 100%; background-color: rgb(51, 255, 0); border-radius: 5px; height: fit-content;">
+                        <p style="padding-left: 10px;font-family: Arial, Helvetica, sans-serif;font-size: 15px;">
+                            Empresa Sabores Naturais<br>
+                            Projeto para fins acadêmicos<br>
+                            <br>
+                            Projeto Integrado final de curso PUC-MG<br>
+                            <br>
+                            Desenvolvido por Érico Felício Gomes Guerino (Noro)<br>
+                            Contato: (41) 99251-1354<br>
+                        </p>
+                    </footer>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    window.onload = function() {
+        checarSessao();
+        carregarValoresTrocaSenha();
+    }
+</script>

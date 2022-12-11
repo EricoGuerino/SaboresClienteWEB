@@ -1,0 +1,70 @@
+/* Estilo personalizado da página */
+
+/* definida imagem de fundo da página */
+body {
+    background: url('../images/background-site.png');
+}
+
+a {
+    cursor: pointer;
+}
+
+.div_img_logo {
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+
+.div_img_logo > img {
+    width: inherit;
+}
+
+nav {
+    width: 100%;
+    background-color: rgb(51, 255, 0);
+    border-radius: 5px;
+    height: 50px;
+}
+
+nav > div {
+    vertical-align: middle;
+}
+
+nav > div.menu {
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+nav > div.carrinho {
+    float: right;
+    padding-right: 10px;
+    padding-top: 0;
+}
+
+nav > div.carrinho > img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/* espaçamento azul antes do navbar do topo da página */
+.top-bar {
+    background-color: #6fa2f7;
+    font-size: 10px;
+    width: 100%;
+    height: 15px;
+}
+
+
+/*define imagem e tamanho do ícone do carrinho de compras na navbar*/
+.btn-icon {
+    background-image: url('../images/cart.png');
+    width: 24px;
+    height: 24px;
+}
+
+
+footer {
+    background-color: #007bff;
+}
+
